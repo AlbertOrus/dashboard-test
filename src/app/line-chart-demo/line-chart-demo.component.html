@@ -18,18 +18,24 @@
         <th *ngFor="let label of lineChartLabels">
           <!--Input meses-->
           <!-- <input [(ngModel)]="label" placeholder="label"> -->
-         {{label}}
+          {{label}}
         </th>
       </tr>
       <tr *ngFor="let d of lineChartData">
         <td *ngFor="let label1 of lineChartLabels; let j=index">
           <!--Input valores-->
-            <input [(ngModel)]="d.data[j]" placeholder="d.data[j]">
+          <input [(ngModel)]="d.data[j]" placeholder="d.data[j]">
           <!--{{d && d.data[j]}}-->
         </td>
       </tr>
     </table>
-    <!--<button (click)="randomize()">CLICK</button>-->
   </div>
   <div class="col-md-1"></div>
 </div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2">
+    <button (click)="validar()">CLICK</button>
+    <div class="col-md-9"></div>
+  </div>
