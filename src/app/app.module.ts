@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { LineChartDemoComponent } from './line-chart-demo/line-chart-demo.component';
+import { MassiveChartComponent } from './massive-chart/massive-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponentComponent,
-    LineChartDemoComponent
+    LineChartDemoComponent,
+    MassiveChartComponent
   ],
   imports: [
     BrowserModule,
