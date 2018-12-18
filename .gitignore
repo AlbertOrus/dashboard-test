@@ -37,6 +37,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/src/canvasjs-2.2
 
 # System Files
 .DS_Store
