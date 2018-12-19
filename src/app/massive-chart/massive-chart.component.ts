@@ -5,16 +5,16 @@
       templateUrl: './massive-chart.component.html'
     })
     export class MassiveChartComponent {
-      // lineChart
-      public data_vector : number[] = [];
-      public size_x : number = 400;
-      public x_label_rate : number = 20
 
+      public size_x : number = 400;
+      public x_label_rate : number = 10
+      
+      // lineChart
       public lineChartData:Array<any> = [
-        {data: this.data_vector, label: 'Series A',pointRadius: 0, borderWidth: 1},
-        {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B',pointRadius: 0, borderWidth: 1},
-        {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C',pointRadius: 0, borderWidth: 1},
-        {data: [48, 88, 27, 59, 10, 47, 50], label: 'Series D',pointRadius: 0, borderWidth: 1}
+        {data: [], label: 'Series A',pointRadius: 0, borderWidth: 1},
+        {data: [], label: 'Series B',pointRadius: 0, borderWidth: 1},
+        {data: [], label: 'Series C',pointRadius: 0, borderWidth: 1},
+        {data: [], label: 'Series D',pointRadius: 0, borderWidth: 1}
       ]; 
       public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
       public lineChartOptions:any = [{
@@ -56,6 +56,7 @@
           pointHoverBorderColor: 'rgba(255,160,122,0.8)'
         }
       ];
+      
       public lineChartLegend:boolean = true;
       public lineChartType:string = 'line';
       
@@ -81,41 +82,13 @@
           }
       }
 
-
-
-     /* public randomize():void {
-        let _lineChartData:Array<any> = new Array(this.lineChartData.length);
-        for (let i = 0; i < this.lineChartData.length; i++) {
-          _lineChartData[i] = {data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label};
-          for (let j = 0; j < this.lineChartData[i].data.length; j++) {
-            _lineChartData[i].data[j] = Math.floor((Math.random() * 100) + 1);
-          }
-        }
-        this.lineChartData = _lineChartData;
-      }*/
-
-      public validar():void {
-        let _lineChartData:Array<any> = new Array(this.lineChartData.length);
-        for (let i = 0; i < this.lineChartData.length; i++) {
-          _lineChartData[i] = {data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label};
-          for (let j = 0; j < this.lineChartData[i].data.length; j++) {
-            _lineChartData[i].data[j] = this.lineChartData[i].data[j];
-          }
-        }
-        this.lineChartData = _lineChartData;
-      }
-
-      /*public num(num,pos: number):void {
-        this.lineChartData[num].data[pos];
-
-      }*/
      
       // events
       public chartClicked(e:any):void {
-        console.log(e);
+
       }
      
       public chartHovered(e:any):void {
-        console.log(e);
+
       }
     }
