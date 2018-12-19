@@ -16,11 +16,9 @@
         {data: [], label: 'Series C',pointRadius: 0, borderWidth: 1},
         {data: [], label: 'Series D',pointRadius: 0, borderWidth: 1}
       ]; 
-      public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+      public lineChartLabels:Array<any> = [];
       public lineChartOptions:any = [{
         responsive: true,
-        pointRadius: 0,
-        borderWidth: 5
       }];
       public lineChartColors:Array<any> = [
         { // grey
