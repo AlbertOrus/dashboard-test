@@ -7,18 +7,20 @@
     export class MassiveChartComponent {
       // lineChart
       public data_vector : number[] = [];
-      public size_x : number = 100;
+      public size_x : number = 400;
 
       public lineChartData:Array<any> = [
-        {data: this.data_vector, label: 'Series A'},
-        {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-        {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'},
-        {data: [48, 88, 27, 59, 10, 47, 50], label: 'Series D'}
+        {data: this.data_vector, label: 'Series A',pointRadius: 0, borderWidth: 1},
+        {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B',pointRadius: 0, borderWidth: 1},
+        {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C',pointRadius: 0, borderWidth: 1},
+        {data: [48, 88, 27, 59, 10, 47, 50], label: 'Series D',pointRadius: 0, borderWidth: 1}
       ]; 
       public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-      public lineChartOptions:any = {
-        responsive: true
-      };
+      public lineChartOptions:any = [{
+        responsive: true,
+        pointRadius: 0,
+        borderWidth: 5
+      }];
       public lineChartColors:Array<any> = [
         { // grey
           backgroundColor: 'rgba(148,159,177,0.2)',
@@ -62,7 +64,12 @@
         this.lineChartLabels = []
         for (let j=0; j<n_data; j++){
           for (let i = 0; i<this.size_x; i++){
-            this.lineChartData[j].data[i] = i*5+(Math.random()*100)*j;
+            if(i == 0){
+              this.lineChartData[j].data[i] = Math.random()*100
+            }
+            else{
+              this.lineChartData[j].data[i] = Math.abs(this.lineChartData[j].data[i-1]+(Math.random()*10)-Math.random()*10);
+            }
             if(i%5 == 0){
               this.lineChartLabels[i] = i;
             }
