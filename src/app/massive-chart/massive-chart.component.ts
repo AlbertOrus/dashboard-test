@@ -8,6 +8,7 @@
       // lineChart
       public data_vector : number[] = [];
       public size_x : number = 400;
+      public x_label_rate : number = 20
 
       public lineChartData:Array<any> = [
         {data: this.data_vector, label: 'Series A',pointRadius: 0, borderWidth: 1},
@@ -70,7 +71,7 @@
             else{
               this.lineChartData[j].data[i] = Math.abs(this.lineChartData[j].data[i-1]+(Math.random()*10)-Math.random()*10);
             }
-            if(i%5 == 0){
+            if(i%(20) == 0){
               this.lineChartLabels[i] = i;
             }
             else{

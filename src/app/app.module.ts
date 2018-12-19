@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { LineChartDemoComponent } from './line-chart-demo/line-chart-demo.component';
 import { MassiveChartComponent } from './massive-chart/massive-chart.component';
+import { NotificationsBarComponent } from './notifications-bar/notifications-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponentComponent,
     LineChartDemoComponent,
-    MassiveChartComponent
+    MassiveChartComponent,
+    NotificationsBarComponent
   ],
   imports: [
     BrowserModule,

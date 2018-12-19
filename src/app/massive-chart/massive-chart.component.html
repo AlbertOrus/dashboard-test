@@ -10,28 +10,7 @@
   <div class="col-md-2"></div>
 </div>
 
-<div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10" style="margin-bottom: 10px">
-    <table class="table table-responsive table-condensed">
-      <tr>
-        <th *ngFor="let label of lineChartLabels">
-          <!--Input meses-->
-          <!-- <input [(ngModel)]="label" placeholder="label"> -->
-          {{label}}
-        </th>
-      </tr>
-      <tr *ngFor="let d of lineChartData">
-        <td *ngFor="let label1 of lineChartLabels; let j=index">
-          <!--Input valores-->
-          <input [(ngModel)]="d.data[j]" placeholder="d.data[j]">
-          <!--{{d && d.data[j]}}-->
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="col-md-1"></div>
-</div>
+
 
 <div class="row">
   <div class="col-md-1"></div>
